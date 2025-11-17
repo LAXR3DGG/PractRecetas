@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí - Angel Lázaro Ocampo</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* --- Reseteo y Estilos Globales --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5; /* Un fondo gris claro para que resalte la tarjeta */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Asegura que ocupe toda la altura */
+            color: #333;
+        }
+
+        /* --- Contenedor Principal (La Tarjeta) --- */
+        .profile-card {
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            padding: 2.5rem;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* --- Imagen de Perfil --- */
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* La hace circular */
+            object-fit: cover; /* Evita que la imagen se estire */
+            border: 4px solid #007bff; /* Un borde azul */
+            margin-bottom: 1.5rem;
+            background-color: #eee; /* Color de fondo mientras carga la imagen */
+        }
+
+        /* --- Textos --- */
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- Lista de Detalles --- */
+        .details-list {
+            list-style: none; /* Quita los puntos de la lista */
+            text-align: left;
+            margin: 2rem 0;
+            padding: 0 1rem;
+        }
+
+        .details-list li {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Iconos para la lista de detalles */
+        .details-list li i {
+            width: 30px; /* Espacio para el icono */
+            font-size: 1.1rem;
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+        /* --- Redes Sociales --- */
+        .social-links {
+            border-top: 1px solid #eee;
+            padding-top: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .social-icon-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Espacio entre iconos */
+        }
+
+        .social-icon-list a {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            line-height: 44px; /* Centra verticalmente el icono */
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #ffffff; /* Icono blanco */
+            border-radius: 50%; /* Botones circulares */
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .social-icon-list a:hover {
+            transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+            opacity: 0.9;
+        }
+
+        /* Colores específicos para cada red social */
+        .icon-facebook    { background-color: #1877F2; }
+        .icon-instagram   { background-color: #E4405F; }
+        .icon-x           { background-color: #000000; }
+        .icon-tiktok      { background-color: #000000; } /* TikTok tiene un logo complejo, se usa negro */
+        .icon-onlyfans    { background-color: #00AFF0; }
+
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+
+        <img src="ok.jpg" alt="Foto de Angel Lázaro Ocampo" class="profile-image">
+
+        <h1>Angel Lázaro Ocampo</h1>
+        <p class="subtitle">Estudiante de Informática</p>
+
+        <ul class="details-list">
+            <li>
+                <i class="fa-solid fa-cake-candles"></i>
+                <span>22 años</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Jugador de videojuegos</span>
+            </li>
+            <li>
+                <i class="fa-solid fa-trophy"></i>
+                <span>Profesional de Balatro</span>
+            </li>
+        </ul>
+
+        <div class="social-links">
+            <h3>Sígueme</h3>
+            <ul class="social-icon-list">
+                <li>
+                    <a href="#" target="_blank" class="icon-facebook" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-instagram" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-x" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-tiktok" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="icon-onlyfans" aria-label="OnlyFans">
+                        <i class="fa-brands fa-onlyfans"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!--Hola-->
+</body>
+</html>
