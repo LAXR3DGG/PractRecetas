@@ -3,196 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí - Angel Lázaro Ocampo</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <title>Recetas Francesas Clásicas</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* --- Reseteo y Estilos Globales --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Configuración global de la fuente y estilos base */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f0f2f5; /* Un fondo gris claro para que resalte la tarjeta */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Asegura que ocupe toda la altura */
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
             color: #333;
         }
-
-        /* --- Contenedor Principal (La Tarjeta) --- */
-        .profile-card {
-            background-color: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-            padding: 2.5rem;
-            overflow: hidden;
-            border: 1px solid #e0e0e0;
+        /* Estilos personalizados para los iconos SVG (una flor de lis simple) */
+        .fleur-de-lis {
+            fill: #c20000; /* Un rojo borgoña */
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
         }
-
-        /* --- Imagen de Perfil --- */
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* La hace circular */
-            object-fit: cover; /* Evita que la imagen se estire */
-            border: 4px solid #007bff; /* Un borde azul */
-            margin-bottom: 1.5rem;
-            background-color: #eee; /* Color de fondo mientras carga la imagen */
-        }
-
-        /* --- Textos --- */
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.15rem;
-            font-weight: 400;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-
-        /* --- Lista de Detalles --- */
-        .details-list {
-            list-style: none; /* Quita los puntos de la lista */
-            text-align: left;
-            margin: 2rem 0;
-            padding: 0 1rem;
-        }
-
-        .details-list li {
-            font-size: 1rem;
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Iconos para la lista de detalles */
-        .details-list li i {
-            width: 30px; /* Espacio para el icono */
-            font-size: 1.1rem;
-            color: #007bff;
-            margin-right: 10px;
-        }
-
-        /* --- Redes Sociales --- */
-        .social-links {
-            border-top: 1px solid #eee;
-            padding-top: 2rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-links h3 {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #888;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 1rem;
-        }
-
-        .social-icon-list {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 15px; /* Espacio entre iconos */
-        }
-
-        .social-icon-list a {
-            display: inline-block;
-            width: 44px;
-            height: 44px;
-            line-height: 44px; /* Centra verticalmente el icono */
-            font-size: 1.2rem;
-            text-decoration: none;
-            color: #ffffff; /* Icono blanco */
-            border-radius: 50%; /* Botones circulares */
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        .social-icon-list a:hover {
-            transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
-            opacity: 0.9;
-        }
-
-        /* Colores específicos para cada red social */
-        .icon-facebook    { background-color: #1877F2; }
-        .icon-instagram   { background-color: #E4405F; }
-        .icon-x           { background-color: #000000; }
-        .icon-tiktok      { background-color: #000000; } /* TikTok tiene un logo complejo, se usa negro */
-        .icon-onlyfans    { background-color: #00AFF0; }
-
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-red': '#c20000',
+                        'secondary-gold': '#ffd700',
+                        'bg-light': '#fefefe',
+                        'card-bg': '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body class="min-h-screen p-4 sm:p-8">
 
-    <div class="profile-card">
+    <!-- Encabezado Principal -->
+    <header class="text-center mb-10 p-6 bg-primary-red text-white rounded-xl shadow-lg">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-2">
+            La Cuisine Française
+        </h1>
+        <p class="text-lg sm:text-xl font-light">
+            Cinco Recetas Clásicas de la Gastronomía Francesa
+        </p>
+    </header>
 
-        <img src="ok.jpg" alt="Foto de Angel Lázaro Ocampo" class="profile-image">
+    <!-- Contenedor Principal de Recetas -->
+    <main class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <h1>Angel Lázaro Ocampo</h1>
-        <p class="subtitle">Estudiante de Informática</p>
+            <!-- RECETA 1: Ratatouille -->
+            <div class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-red">
+                <h2 class="text-2xl font-semibold mb-3 text-primary-red flex items-center">
+                    <svg class="fleur-de-lis" viewBox="0 0 512 512">
+                        <path d="M416 352c-8.1 0-16.2-2.1-23.8-6.1l-102.3-54c-12.8-6.8-27.7-6.8-40.5 0l-102.3 54c-7.6 4-15.7 6.1-23.8 6.1C85.1 352 64 330.9 64 304v-96c0-26.9 21.1-48 48-48h288c26.9 0 48 21.1 48 48v96c0 26.9-21.1 48-48 48zm-288-96h256c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H128c-8.8 0-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zM256 64c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM256 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM96 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM416 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM480 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32z"/>
+                    </svg>
+                    Ratatouille
+                </h2>
+                <p class="text-sm italic mb-4 text-gray-600">
+                    Un guiso tradicional de verduras del sur de Francia, cocinado a fuego lento.
+                </p>
+                <h3 class="font-bold mb-2 text-lg">Ingredientes clave:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Berenjena y Calabacín</li>
+                    <li>Tomates, Cebolla y Ajo</li>
+                    <li>Pimientos (rojo y amarillo)</li>
+                    <li>Hierbas provenzales</li>
+                    <li>Aceite de oliva</li>
+                </ul>
+            </div>
 
-        <ul class="details-list">
-            <li>
-                <i class="fa-solid fa-cake-candles"></i>
-                <span>22 años</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-gamepad"></i>
-                <span>Jugador de videojuegos</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-trophy"></i>
-                <span>Profesional de Balatro</span>
-            </li>
-        </ul>
+            <!-- RECETA 2: Crème brûlée -->
+            <div class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-red">
+                <h2 class="text-2xl font-semibold mb-3 text-primary-red flex items-center">
+                    <svg class="fleur-de-lis" viewBox="0 0 512 512">
+                        <path d="M416 352c-8.1 0-16.2-2.1-23.8-6.1l-102.3-54c-12.8-6.8-27.7-6.8-40.5 0l-102.3 54c-7.6 4-15.7 6.1-23.8 6.1C85.1 352 64 330.9 64 304v-96c0-26.9 21.1-48 48-48h288c26.9 0 48 21.1 48 48v96c0 26.9-21.1 48-48 48zm-288-96h256c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H128c-8.8 0-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zM256 64c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM256 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM96 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM416 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM480 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32z"/>
+                    </svg>
+                    Crème brûlée
+                </h2>
+                <p class="text-sm italic mb-4 text-gray-600">
+                    Un postre de natillas con vainilla, cubierto con una capa de azúcar caramelizada y crujiente.
+                </p>
+                <h3 class="font-bold mb-2 text-lg">Ingredientes clave:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Yemas de huevo</li>
+                    <li>Nata espesa (crema de leche)</li>
+                    <li>Azúcar</li>
+                    <li>Extracto de vainilla o vaina</li>
+                </ul>
+            </div>
 
-        <div class="social-links">
-            <h3>Sígueme</h3>
-            <ul class="social-icon-list">
-                <li>
-                    <a href="#" target="_blank" class="icon-facebook" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="icon-instagram" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="icon-x" aria-label="X">
-                        <i class="fa-brands fa-x-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="icon-tiktok" aria-label="TikTok">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="icon-onlyfans" aria-label="OnlyFans">
-                        <i class="fa-brands fa-onlyfans"></i>
-                    </a>
-                </li>
-            </ul>
+            <!-- RECETA 3: Croissant -->
+            <div class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-red">
+                <h2 class="text-2xl font-semibold mb-3 text-primary-red flex items-center">
+                    <svg class="fleur-de-lis" viewBox="0 0 512 512">
+                        <path d="M416 352c-8.1 0-16.2-2.1-23.8-6.1l-102.3-54c-12.8-6.8-27.7-6.8-40.5 0l-102.3 54c-7.6 4-15.7 6.1-23.8 6.1C85.1 352 64 330.9 64 304v-96c0-26.9 21.1-48 48-48h288c26.9 0 48 21.1 48 48v96c0 26.9-21.1 48-48 48zm-288-96h256c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H128c-8.8 0-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zM256 64c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM256 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM96 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM416 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM480 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32z"/>
+                    </svg>
+                    Croissant
+                </h2>
+                <p class="text-sm italic mb-4 text-gray-600">
+                    Un panecillo de hojaldre, mantecoso y en forma de media luna. ¡El desayuno francés por excelencia!
+                </p>
+                <h3 class="font-bold mb-2 text-lg">Ingredientes clave:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Harina y Levadura</li>
+                    <li>Mantequilla (para el hojaldre)</li>
+                    <li>Leche y Azúcar</li>
+                    <li>Huevo (para pintar)</li>
+                </ul>
+            </div>
+
+            <!-- RECETA 4: Boeuf Bourguignon -->
+            <div class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-red">
+                <h2 class="text-2xl font-semibold mb-3 text-primary-red flex items-center">
+                    <svg class="fleur-de-lis" viewBox="0 0 512 512">
+                        <path d="M416 352c-8.1 0-16.2-2.1-23.8-6.1l-102.3-54c-12.8-6.8-27.7-6.8-40.5 0l-102.3 54c-7.6 4-15.7 6.1-23.8 6.1C85.1 352 64 330.9 64 304v-96c0-26.9 21.1-48 48-48h288c26.9 0 48 21.1 48 48v96c0 26.9-21.1 48-48 48zm-288-96h256c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H128c-8.8 0-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zM256 64c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM256 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM96 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM416 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM480 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32z"/>
+                    </svg>
+                    Boeuf Bourguignon
+                </h2>
+                <p class="text-sm italic mb-4 text-gray-600">
+                    Un estofado francés de carne de res cocinado lentamente en vino tinto de Borgoña con champiñones.
+                </p>
+                <h3 class="font-bold mb-2 text-lg">Ingredientes clave:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Carne de res (para estofado)</li>
+                    <li>Vino tinto (Borgoña)</li>
+                    <li>Tocino (lardon)</li>
+                    <li>Cebollas y Champiñones</li>
+                    <li>Caldo de res</li>
+                </ul>
+            </div>
+
+            <!-- RECETA 5: Soupe à l'oignon Gratinée -->
+            <div class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-red">
+                <h2 class="text-2xl font-semibold mb-3 text-primary-red flex items-center">
+                    <svg class="fleur-de-lis" viewBox="0 0 512 512">
+                        <path d="M416 352c-8.1 0-16.2-2.1-23.8-6.1l-102.3-54c-12.8-6.8-27.7-6.8-40.5 0l-102.3 54c-7.6 4-15.7 6.1-23.8 6.1C85.1 352 64 330.9 64 304v-96c0-26.9 21.1-48 48-48h288c26.9 0 48 21.1 48 48v96c0 26.9-21.1 48-48 48zm-288-96h256c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H128c-8.8 0-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zM256 64c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM256 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM96 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM416 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM480 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32z"/>
+                    </svg>
+                    Soupe à l'oignon Gratinée
+                </h2>
+                <p class="text-sm italic mb-4 text-gray-600">
+                    Sopa de cebolla caramelizada, cubierta con un trozo de pan tostado y una generosa capa de queso gratinado.
+                </p>
+                <h3 class="font-bold mb-2 text-lg">Ingredientes clave:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Cebollas (caramelizadas)</li>
+                    <li>Caldo de res o pollo</li>
+                    <li>Vino blanco seco</li>
+                    <li>Pan (baguette tostada)</li>
+                    <li>Queso (Gruyère o Emmental)</li>
+                </ul>
+            </div>
+
+            <!-- RECETA 6: Tarte Tatin (Adicional) -->
+            <div class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-red md:col-span-2 lg:col-span-1">
+                <h2 class="text-2xl font-semibold mb-3 text-primary-red flex items-center">
+                    <svg class="fleur-de-lis" viewBox="0 0 512 512">
+                        <path d="M416 352c-8.1 0-16.2-2.1-23.8-6.1l-102.3-54c-12.8-6.8-27.7-6.8-40.5 0l-102.3 54c-7.6 4-15.7 6.1-23.8 6.1C85.1 352 64 330.9 64 304v-96c0-26.9 21.1-48 48-48h288c26.9 0 48 21.1 48 48v96c0 26.9-21.1 48-48 48zm-288-96h256c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H128c-8.8 0-16-7.2-16-16v-96c0-8.8 7.2-16 16-16zM256 64c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM256 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM96 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM416 160c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM480 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32zM32 320c-17.7 0-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32s-14.3-32-32-32z"/>
+                    </svg>
+                    Tarte Tatin
+                </h2>
+                <p class="text-sm italic mb-4 text-gray-600">
+                    La famosa tarta de manzana al revés, donde las manzanas se caramelizan en mantequilla y azúcar antes de hornearse.
+                </p>
+                <h3 class="font-bold mb-2 text-lg">Ingredientes clave:</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <li>Manzanas (preferiblemente Granny Smith)</li>
+                    <li>Mantequilla</li>
+                    <li>Azúcar (para el caramelo)</li>
+                    <li>Masa de hojaldre</li>
+                </ul>
+            </div>
         </div>
 
-    </div>
+        <div class="mt-12 p-6 bg-secondary-gold bg-opacity-10 rounded-xl border-l-4 border-secondary-gold text-gray-700">
+            <h3 class="text-xl font-semibold mb-2">¡Bon Appétit!</h3>
+            <p>
+                La cocina francesa es conocida por su refinamiento y el uso de ingredientes frescos. Estas recetas son un excelente punto de partida para explorar la gastronomía de Francia.
+            </p>
+        </div>
+    </main>
 
+    <!-- Pie de página simple -->
+    <footer class="text-center mt-10 p-4 text-gray-500 text-sm">
+        <p>&copy; 2025 Recetas Clásicas Francesas. Vive la France!</p>
+    </footer>
 
-    <!--Hola-->
 </body>
 </html>
